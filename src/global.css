@@ -1,0 +1,91 @@
+:root {
+  --text-color: rgb(246 247 249);
+  --bg-color: rgb(35 39 47);
+  --primary-color: #00d8ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.wrapper {
+  max-width: 100vw;
+  width: min(90%, 768px);
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.github_link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100px;
+  aspect-ratio: 1/1;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  background-color: #111;
+}
+
+.github_logo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+  width: 100px;
+  aspect-ratio: 1/1;
+  transform: rotate(45deg);
+  transition: all 0.3s;
+  cursor: pointer;
+  color: #fff;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.github_icon {
+  width: 32px;
+  aspect-ratio: 1/1;
+}
+
+.logo_container {
+  width: min(300px, 80%);
+  animation: animate_logo 10s infinite linear;
+}
+
+.title {
+  text-align: center;
+  position: relative;
+}
+
+.desc {
+  text-align: center;
+}
+
+.chip_container {
+  display: flex;
+  gap: 1rem;
+}
+
+.chip {
+  padding: 0.5rem 1rem;
+}
+
+@keyframes animate_logo {
+  to {
+    transform: rotate(360deg);
+  }
+}
